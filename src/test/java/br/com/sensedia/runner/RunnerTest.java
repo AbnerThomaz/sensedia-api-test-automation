@@ -8,9 +8,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "br.com.sensedia",
-        plugin = {"pretty"}
+        plugin = {"pretty", "html:target/cucumber-report.html"},
+        monochrome = true
 )
-public class BoardRunnerTest {
+public class RunnerTest {
 }
-
-

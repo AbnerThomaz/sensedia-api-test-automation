@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": ["message", "error"],
+  "properties": {
+    "message": {
+      "type": "string",
+      "minLength": 1
+    },
+    "error": {
+      "type": "string",
+      "enum": ["ERROR"]
+    }
+  },
+  "additionalProperties": true
+}

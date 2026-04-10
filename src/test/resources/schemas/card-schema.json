@@ -1,0 +1,127 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "idList",
+    "idBoard",
+    "closed",
+    "url",
+    "shortUrl",
+    "shortLink"
+  ],
+  "additionalProperties": true,
+  "properties": {
+
+    "id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{24}$"
+    },
+
+    "name": { "type": "string" },
+
+    "desc": { "type": "string" },
+
+    "closed": { "type": "boolean" },
+
+    "idBoard": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{24}$"
+    },
+
+    "idList": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{24}$"
+    },
+
+    "idMembers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "idMembersVoted": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "idShort": { "type": "number" },
+
+    "idAttachmentCover": {
+      "type": ["string", "null"]
+    },
+
+    "labels": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+
+    "idLabels": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "manualCoverAttachment": { "type": "boolean" },
+
+    "pos": { "type": "number" },
+
+    "shortLink": { "type": "string" },
+
+    "shortUrl": {
+      "type": "string",
+      "pattern": "^https://.*"
+    },
+
+    "url": {
+      "type": "string",
+      "pattern": "^https://.*"
+    },
+
+    "isTemplate": { "type": "boolean" },
+
+    "cardRole": {
+      "type": ["string", "null"]
+    },
+
+    "mirrorSourceId": {
+      "type": ["string", "null"]
+    },
+
+    "attachments": {
+      "type": "array"
+    },
+
+    "stickers": {
+      "type": "array"
+    },
+
+    "limits": {
+      "type": "object"
+    },
+
+    "badges": {
+      "type": "object",
+      "properties": {
+        "attachments": { "type": "number" },
+        "comments": { "type": "number" },
+        "description": { "type": "boolean" },
+        "due": { "type": ["string", "null"] },
+        "dueComplete": { "type": "boolean" },
+        "subscribed": { "type": "boolean" },
+        "votes": { "type": "number" }
+      }
+    },
+
+    "cover": {
+      "type": "object",
+      "properties": {
+        "idAttachment": { "type": ["string", "null"] },
+        "color": { "type": ["string", "null"] },
+        "size": { "type": "string" },
+        "brightness": { "type": "string" },
+        "yPosition": { "type": "number" },
+        "idPlugin": { "type": ["string", "null"] }
+      }
+    }
+
+  }
+}
