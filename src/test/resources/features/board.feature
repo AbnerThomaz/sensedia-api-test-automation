@@ -1,5 +1,6 @@
 # language: pt
 
+@All @Board
 Funcionalidade: Criação de Boards no Trello
 
   # Cenário de sucesso principal

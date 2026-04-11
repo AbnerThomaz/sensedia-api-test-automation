@@ -1,5 +1,6 @@
 # language: pt
 
+@All
 Funcionalidade: Atualizacao de Card
 
 # =========================

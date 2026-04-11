@@ -1,5 +1,6 @@
 # language: pt
 
+@All
 Funcionalidade: Autenticacao API Card
 
 # =========================

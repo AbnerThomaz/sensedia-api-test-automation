@@ -9,10 +9,10 @@ import io.restassured.response.Response;
 import java.util.HashMap;
 import java.util.Map;
 
+
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static io.restassured.RestAssured.*;
 import static br.com.sensedia.config.BaseConfig.*;
-import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertTrue;
 
 public class CardSteps {
@@ -20,6 +20,9 @@ public class CardSteps {
     private String listId;
     private String cardId;
     private Response response;
+    private String listaAFazer;
+    private String listaEmAndamento;
+    private String listaConcluido;
 
     // ========================
     // BOARD
@@ -48,6 +51,7 @@ public class CardSteps {
     // LISTAS
     // ========================
 
+
     @Quando("eu buscar listas do board")
     public void buscarListas() {
 
@@ -63,6 +67,8 @@ public class CardSteps {
         listId = response.jsonPath().getString("[0].id");
     }
 
+
+
     // ========================
     // CREATE
     // ========================
@@ -71,6 +77,7 @@ public class CardSteps {
     public void criarCard() {
 
         String idListValido = getListIdValido();
+
 
         Map<String, Object> params = new HashMap<>();
         params.put("key", KEY);
