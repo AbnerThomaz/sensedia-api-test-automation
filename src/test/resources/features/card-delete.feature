@@ -1,5 +1,6 @@
 # language: pt
 
+@All
 Funcionalidade: Delete de Card
 
 Cenario: Excluir um card válido

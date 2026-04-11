@@ -1,7 +1,8 @@
 # language: pt
 
+@All
 Funcionalidade: CRUD de Card no Trello
-
+  
   Cenario: Fluxo completo de card
 
     Dado que possuo um board válido
